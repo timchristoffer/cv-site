@@ -3,6 +3,7 @@ import Experience from "@/components/Experience/Experience";
 import Header from "@/components/Header/Header";
 import NavBar from "@/components/NavBar/NavBar";
 import Skills from "@/components/Skills/Skills";
+import About from "@/components/About/About";
 // import Portfolio from "@/components/Portfolio/Portfolio";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <div className="container">
           <Header />
           <CodeSlider />
+          <About />
           <Experience />
           <Skills />
           {/* <Portfolio /> */}

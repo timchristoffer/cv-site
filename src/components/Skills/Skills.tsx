@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import styles from './Skills.module.css';
+import Image from 'next/image';
 
 const Skills = () => {
   const [showMoreFrontend, setShowMoreFrontend] = useState(false);
@@ -14,7 +15,7 @@ const Skills = () => {
     <div className={styles['skills-container']}>
       <div className={styles['skills-list']}>
         <div className={styles['skills-item']}>
-          <img src="/Images/heart-spiked.png" alt="Frontend Development" className={styles['skills-item-img']} />
+          <Image src="/Images/heart-spiked.png" alt="Frontend Development" className={styles['skills-item-img']} width={100} height={100} />
           <div className={styles['skills-content']}>
             <h1 className={styles['skills-title']}>Frontend Development</h1>
             <div className={styles['skills-desc']}>
@@ -41,7 +42,7 @@ const Skills = () => {
           </div>
         </div>
         <div className={styles['skills-item']}>
-          <img src="/Images/heart-spiked.png" alt="Backend Development" className={styles['skills-item-img']} />
+          <Image src="/Images/heart-spiked.png" alt="Backend Development" className={styles['skills-item-img']} width={100} height={100} />
           <div className={styles['skills-content']}>
             <h1 className={styles['skills-title']}>Backend Development</h1>
             <div className={styles['skills-desc']}>
@@ -57,7 +58,7 @@ const Skills = () => {
           </div>
         </div>
         <div className={styles['skills-item']}>
-          <img src="/Images/heart-spiked.png" alt="Database Management" className={styles['skills-item-img']} />
+          <Image src="/Images/heart-spiked.png" alt="Database Management" className={styles['skills-item-img']} width={100} height={100} />
           <div className={styles['skills-content']}>
             <h1 className={styles['skills-title']}>Database Management</h1>
             <div className={styles['skills-desc']}>
@@ -73,7 +74,7 @@ const Skills = () => {
           </div>
         </div>
         <div className={styles['skills-item']}>
-          <img src="/Images/heart-spiked.png" alt="Other" className={styles['skills-item-img']} />
+          <Image src="/Images/heart-spiked.png" alt="Other" className={styles['skills-item-img']} width={100} height={100} />
           <div className={styles['skills-content']}>
             <h1 className={styles['skills-title']}>Other</h1>
             <div className={styles['skills-desc']}>
