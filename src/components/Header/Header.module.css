@@ -1,0 +1,173 @@
+.header-container {
+    width: 90vw;
+    max-width: 1600px;
+    height: auto;
+    margin: 0 auto; /* Center the container itself */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.header-content {
+    position: relative; /* Enable positioning of child elements */
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content img {
+    position: absolute; /* Position images absolutely within the container */
+    object-fit: cover; /* Ensures the image covers the specified dimensions */
+    border-radius: 1em;
+    bottom: 0; /* Align images at the bottom */
+}
+
+.header-content img:first-child {
+    z-index: 2; /* Ensure the first image is below the pseudo-element */
+    width: 40vw; /* Adjust the width to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
+    filter: grayscale(100%);
+}
+
+.header-content img:last-child {
+    z-index: 0; /* Ensure the second image is below the first image */
+    width: 100%; /* Ensure the second image covers the full width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.header-content .filled-text {
+    position: absolute; /* Position text absolutely within the container */
+    top: 100px ;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ffffff;
+    text-align: center;
+    z-index: 1; /* Ensure text is above the first image */
+    font-family: 'Thunder', sans-serif;
+    font-weight: 800; /* Use the ExtraBoldLC font */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10vw; /* Adjust font size as needed */
+    line-height: 1; /* Adjust line height to ensure text fits within the container */
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Ensure text does not overflow */
+}
+
+.header-content .outlined-text {
+    position: absolute; /* Position text absolutely within the container */
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: transparent; /* Make the text itself transparent */
+    -webkit-text-stroke: 2px #ffffff; /* Outline the text */
+    text-align: center;
+    z-index: 3; /* Ensure text is above the first image */
+    font-family: 'Thunder', sans-serif;
+    font-weight: 800; /* Use the ExtraBoldLC font */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10vw; /* Adjust font size as needed */
+    line-height: 1; /* Adjust line height to ensure text fits within the container */
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Ensure text does not overflow */
+    pointer-events: none; /* Prevent hover effects */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 767px) {
+    .header-content {
+        height: 300px;
+    }
+
+    .header-content img:first-child {
+        width: 70vw;
+    }
+
+    .header-content img:last-child {
+        height: 300px;
+    }
+
+    .header-content .filled-text,
+    .header-content .outlined-text {
+        font-size: 20vw; /* Adjust font size for smaller screens */
+    }
+
+    .header-content h3 {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header-content {
+        height: 400px;
+    }
+
+    .header-content img:first-child {
+        width: 40vw;
+    }
+
+    .header-content img:last-child {
+        height: 400px;
+    }
+
+    .header-content .filled-text,
+    .header-content .outlined-text {
+        font-size: 20vw; /* Adjust font size for medium screens */
+    }
+
+    .header-content h3 {
+        font-size: 1.25rem; /* Adjust font size for medium screens */
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .header-content {
+        height: 500px;
+    }
+
+    .header-content img:first-child {
+        width: 30vw;
+    }
+
+    .header-content img:last-child {
+        height: 500px;
+    }
+
+    .header-content .filled-text,
+    .header-content .outlined-text {
+        font-size: 20vw; /* Adjust font size for large screens */
+    }
+
+    .header-content h3 {
+        font-size: 1.5rem; /* Adjust font size for large screens */
+    }
+}
+
+@media (min-width: 1280px) {
+    .header-content {
+        height: 600px;
+    }
+
+    .header-content img:first-child {
+        width: 25vw;
+    }
+
+    .header-content img:last-child {
+        height: 600px;
+    }
+
+    .header-content .filled-text,
+    .header-content .outlined-text {
+        font-size: 14vw; /* Adjust font size for extra large screens */
+    }
+
+    .header-content h3 {
+        font-size: 1.75rem; /* Adjust font size for extra large screens */
+    }
+}

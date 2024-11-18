@@ -1,0 +1,96 @@
+.exp-container {
+    width: 90vw; /* Match the width of the header content */
+    max-width: 1600px;
+    margin: 0 auto; /* Center the container */
+    padding: 0; /* Remove padding to match the header alignment */
+}
+
+.exp-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    align-items: center;
+    justify-content: space-between; /* Distribute items evenly with space between them */
+    width: 100%;
+    gap: 20px; /* Adjust the gap between the items */
+}
+
+.exp-item {
+    flex: 1 1 calc(20% - 20px); /* Allow items to grow and shrink equally, and calculate width */
+    height: 200px;
+    background-color: var(--background-blur); /* Use the defined CSS variable */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.exp-item:hover {
+    transform: scale(1.05) translateZ(0); /* Slightly scale up the item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase the shadow for a more pronounced effect */
+    cursor: pointer;
+}
+
+.exp-text-container {
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    width: 100%;
+    margin-top: 20px; /* Add some space above */
+}
+
+.exp-text {
+    font-size: 1rem; /* Adjust font size as needed */
+    color: var(--primary-color); /* Use the defined CSS variable for color */
+}
+
+.exp-text:hover{
+    cursor: pointer;
+    color: #4caf50;
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 767px) {
+    .exp-list {
+        flex-direction: column; /* Stack items in a column */
+        gap: 20px; /* Adjust the gap between the items */
+    }
+
+    .exp-item {
+        width: 100%; /* Full width for each item */
+        height: auto; /* Adjust height to fit content */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .exp-container {
+        height: auto; /* Adjust height to fit content */
+    }
+
+    .exp-item {
+        flex: 1 1 calc(50% - 20px); /* Two items per row */
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .exp-container {
+        height: auto; /* Adjust height to fit content */
+    }
+
+    .exp-item {
+        flex: 1 1 calc(33.33% - 20px); /* Three items per row */
+    }
+}
+
+@media (min-width: 1280px) {
+    .exp-container {
+        height: auto; /* Adjust height to fit content */
+    }
+
+    .exp-item {
+        flex: 1 1 calc(20% - 20px); /* Five items per row */
+    }
+}
