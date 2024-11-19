@@ -26,11 +26,11 @@ const ContactForm = () => {
     e.preventDefault();
 
     emailjs.send(
-      'service_q3gfap4', // Replace with your Email.js service ID
-      'template_bej7c1g', // Replace with your Email.js template ID
-      formData,
-      'BLTPImPCO4JZzgYXa' // Replace with your Email.js user ID
-    )
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        formData,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
+      )
     .then((result) => {
       console.log(result.text);
       setShowModal(true);

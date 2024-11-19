@@ -1,40 +1,41 @@
-import React from 'react';
-import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Portfolio.module.css';
+
+const projects = [
+  {
+    id: 'project1',
+    title: 'Project One',
+    description: 'This is a description of project one.',
+    image: '/images/project1.jpg',
+    languages: ['JavaScript', 'React', 'CSS'],
+  },
+  {
+    id: 'project2',
+    title: 'Project Two',
+    description: 'This is a description of project two.',
+    image: '/images/project2.jpg',
+    languages: ['Python', 'Django', 'HTML'],
+  },
+  // Lägg till fler projekt här
+];
 
 const Portfolio = () => {
   return (
-    <div className={styles['portfolio-container']}>
-      <div className={styles['portfolio-list']}>
-        <div className={styles['portfolio-item']}>
-          <Image src="/Images/heart-spiked.png" alt="portfolioArt" width={100} height={100} />
-          <div className={styles['portfolio-content']}>
-            <h1 className={styles['portfolio-title']}>PORTFOLIO 1</h1>
-            <p className={styles['portfolio-desc']}>To style the portfolio items in a 2x2 grid with the image on the left and the title and description on the right, you can use CSS Grid and Flexbox. This will ensure a modern and sleek layout.</p>
+    <div className={styles.portfolioContainer}>
+      {projects.map((project) => (
+        <Link href={`/portfolio/${project.id}`} key={project.id}>
+          <div className={styles.portfolioCard}>
+            <img src={project.image} alt={project.title} className={styles.portfolioImage} />
+            <h3 className={styles.portfolioTitle}>{project.title}</h3>
+            <p className={styles.portfolioDescription}>{project.description}</p>
+            <div className={styles.portfolioLanguages}>
+              {project.languages.map((language, index) => (
+                <span key={index} className={styles.languageBadge}>{language}</span>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className={styles['portfolio-item']}>
-          <Image src="/Images/heart-spiked.png" alt="portfolioArt" width={100} height={100} />
-          <div className={styles['portfolio-content']}>
-            <h1 className={styles['portfolio-title']}>PORTFOLIO 2</h1>
-            <p className={styles['portfolio-desc']}>To style the portfolio items in a 2x2 grid with the image on the left and the title and description on the right, you can use CSS Grid and Flexbox. This will ensure a modern and sleek layout.</p>
-          </div>
-        </div>
-        <div className={styles['portfolio-item']}>
-          <Image src="/Images/heart-spiked.png" alt="portfolioArt" width={100} height={100} />
-          <div className={styles['portfolio-content']}>
-            <h1 className={styles['portfolio-title']}>PORTFOLIO 3</h1>
-            <p className={styles['portfolio-desc']}>To style the portfolio items in a 2x2 grid with the image on the left and the title and description on the right, you can use CSS Grid and Flexbox. This will ensure a modern and sleek layout.</p>
-          </div>
-        </div>
-        <div className={styles['portfolio-item']}>
-          <Image src="/Images/heart-spiked.png" alt="portfolioArt" width={100} height={100} />
-          <div className={styles['portfolio-content']}>
-            <h1 className={styles['portfolio-title']}>PORTFOLIO 4</h1>
-            <p className={styles['portfolio-desc']}>To style the portfolio items in a 2x2 grid with the image on the left and the title and description on the right, you can use CSS Grid and Flexbox. This will ensure a modern and sleek layout.</p>
-          </div>
-        </div>
-      </div>
+        </Link>
+      ))}
     </div>
   );
 };

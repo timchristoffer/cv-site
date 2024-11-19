@@ -85,6 +85,27 @@ img {
   margin: 5rem auto 0 auto; /* Center the container itself */
   padding: 1rem 2rem; /* Match the padding of the navbar */
   box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  min-height: 100vh;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 2rem;
+}
+
+.project-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+    align-items: center; /* Center the content horizontally */
 }
 
 @media (min-width: 640px) {

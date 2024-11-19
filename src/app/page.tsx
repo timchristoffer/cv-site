@@ -4,7 +4,7 @@ import Header from "@/components/Header/Header";
 import NavBar from "@/components/NavBar/NavBar";
 import Skills from "@/components/Skills/Skills";
 import About from "@/components/About/About";
-// import Portfolio from "@/components/Portfolio/Portfolio";
+import Copyright from "@/components/Copyright/Copyright";
 
 export default function Home() {
   return (
@@ -16,8 +16,8 @@ export default function Home() {
           <About />
           <Experience />
           <Skills />
-          {/* <Portfolio /> */}
       </div>
+      <Copyright />
     </>
   );
 }
