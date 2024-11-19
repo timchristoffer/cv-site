@@ -91,21 +91,18 @@ img {
 .portfolio-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  margin-top: 2rem;
+  min-height: 85vh;
 }
 
 .project-container{
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 85vh;
 }
 
 .contact-container {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-    align-items: center; /* Center the content horizontally */
+  min-height: 85vh;
 }
 
 @media (min-width: 640px) {

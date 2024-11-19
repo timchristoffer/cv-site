@@ -1,14 +1,9 @@
-.prohect-container{
-  display: flex;
-  min-height: 100vh;
-}
-
 .projectContainer {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-    margin-top: 2rem;
+    min-height: 85vh;
   }
   
   .projectImage {
@@ -17,6 +12,7 @@
     object-fit: cover;
     border-radius: 10px;
   }
+  
   
   .projectTitle {
     font-size: 2rem;

@@ -1,56 +1,63 @@
 .portfolioContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    padding: 2rem;
-  }
-  
-  .portfolioCard {
-    background: var(--background-blur);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    width: 300px;
-    text-align: center;
-  }
-  
-  .portfolioCard:hover {
-    transform: translateY(-10px);
-  }
-  
-  .portfolioImage {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .portfolioTitle {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    color: #ffffff;
-  }
-  
-  .portfolioDescription {
-    font-size: 1rem;
-    color: #ffffff;
-    padding: 0 1rem;
-  }
-  
-  .portfolioLanguages {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-    padding: 1rem;
-  }
-  
-  .languageBadge {
-    background: #4caf50;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    font-size: 0.875rem;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.portfolioCard {
+  background: var(--background-blur);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  width: 300px;
+  text-align: center;
+  text-decoration: none; /* Ta bort understrykning från länkar */
+}
+
+.portfolioCard:hover {
+  transform: translateY(-10px);
+}
+
+.portfolioCard a {
+  text-decoration: none; /* Ta bort understrykning från länkar */
+  color: inherit; /* Behåll textfärgen */
+}
+
+.portfolioImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.portfolioTitle {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #ffffff;
+}
+
+.portfolioDescription {
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 0 1rem;
+}
+
+.portfolioLanguages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.languageBadge {
+  background: #4caf50;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.875rem;
+}

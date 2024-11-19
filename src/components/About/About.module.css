@@ -58,6 +58,11 @@
   max-width: 40rem; /* max-w-2xl */
 }
 
+.gap{
+  display: block;
+  margin-top: 1rem;
+}
+
 .social-icons {
   display: flex;
   gap: 1rem;

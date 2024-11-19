@@ -1,6 +1,7 @@
 .footer {
     position: relative;
     width: 100%;
+    margin-top: 4rem;
     background-color: var(--background-blur);
     color: var(--foreground);
     text-align: center;
