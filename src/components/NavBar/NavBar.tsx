@@ -17,7 +17,7 @@ const NavBar = () => {
       <div className={`${styles.menu} ${menuActive ? styles.active : ''}`}>
         <Link href="/">Home</Link>
         <Link href="/portfolio">Portfolio</Link>
-        <Link href="/contact">Contact</Link>
+          <Link href="/contact" className={styles.hireButton}>Hire me!</Link>
       </div>
       <div className={styles['menu-toggle']} onClick={toggleMenu}>
         ☰

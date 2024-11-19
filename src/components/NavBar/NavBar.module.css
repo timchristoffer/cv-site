@@ -29,6 +29,19 @@
   font-weight: bold;
 }
 
+.navbar .hireButton{
+  background-color: #4caf50;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.navbar .hireButton:hover{
+  background-color: #4caf50;
+  color: #000000!important;
+  transition: 0.3s;
+}
+
 .navbar .menu {
   display: flex;
   align-items: center;
