@@ -1,20 +1,22 @@
 .header-container {
-    width: 90vw;
-    max-width: 1600px;
+    width: 70vw;
     height: auto;
-    margin: 0 auto; /* Center the container itself */
     margin-top: 2rem;
     margin-bottom: 2rem;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .header-content {
     position: relative; /* Enable positioning of child elements */
-    width: 100%;
-    max-width: 1600px;
+    width: 100%; /* Use full width of the container */
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .header-content img {
@@ -26,7 +28,7 @@
 
 .header-content img:first-child {
     z-index: 2; /* Ensure the first image is below the pseudo-element */
-    width: 40vw; /* Adjust the width to make the image smaller */
+    width: 50vw; /* Adjust the width to make the image larger */
     height: auto; /* Maintain aspect ratio */
     filter: grayscale(100%);
 }
@@ -34,12 +36,12 @@
 .header-content img:last-child {
     z-index: 0; /* Ensure the second image is below the first image */
     width: 100%; /* Ensure the second image covers the full width */
-    height: auto; /* Maintain aspect ratio */
+    height: 50px; /* Maintain aspect ratio */
 }
 
 .header-content .filled-text {
     position: absolute; /* Position text absolutely within the container */
-    top: 100px ;
+    top: 100px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -51,10 +53,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10vw; /* Adjust font size as needed */
+    font-size: 10vw;
     line-height: 1; /* Adjust line height to ensure text fits within the container */
     margin: 0; /* Remove default margin */
-    overflow: hidden; /* Ensure text does not overflow */
 }
 
 .header-content .outlined-text {
@@ -72,10 +73,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10vw; /* Adjust font size as needed */
+    font-size: 10vw;
     line-height: 1; /* Adjust line height to ensure text fits within the container */
     margin: 0; /* Remove default margin */
-    overflow: hidden; /* Ensure text does not overflow */
     pointer-events: none; /* Prevent hover effects */
 }
 
@@ -95,11 +95,16 @@
 
     .header-content .filled-text,
     .header-content .outlined-text {
-        font-size: 20vw; /* Adjust font size for smaller screens */
+        font-size: 15vw; /* Adjust font size for smaller screens */
+        top: 40%; /* Adjust top position for smaller screens */
     }
 
-    .header-content h3 {
-        font-size: 1rem; /* Adjust font size for smaller screens */
+    .header-content .filled-text {
+        z-index: 10;
+    }
+
+    .header-content .outlined-text {
+        display: none;
     }
 }
 
@@ -109,7 +114,7 @@
     }
 
     .header-content img:first-child {
-        width: 40vw;
+        width: 50vw;
     }
 
     .header-content img:last-child {
@@ -118,11 +123,16 @@
 
     .header-content .filled-text,
     .header-content .outlined-text {
-        font-size: 20vw; /* Adjust font size for medium screens */
+        font-size: 15vw; /* Adjust font size for medium screens */
+        top: 45%; /* Adjust top position for medium screens */
     }
 
-    .header-content h3 {
-        font-size: 1.25rem; /* Adjust font size for medium screens */
+    .header-content .filled-text {
+        z-index: 1; /* Reset z-index */
+    }
+
+    .header-content .outlined-text {
+        display: flex; /* Reset display */
     }
 }
 
@@ -132,7 +142,7 @@
     }
 
     .header-content img:first-child {
-        width: 30vw;
+        width: 45vw;
     }
 
     .header-content img:last-child {
@@ -141,21 +151,26 @@
 
     .header-content .filled-text,
     .header-content .outlined-text {
-        font-size: 20vw; /* Adjust font size for large screens */
+        font-size: 15vw; /* Adjust font size for large screens */
+        top: 50%; /* Adjust top position for large screens */
     }
 
-    .header-content h3 {
-        font-size: 1.5rem; /* Adjust font size for large screens */
+    .header-content .filled-text {
+        z-index: 1; /* Reset z-index */
+    }
+
+    .header-content .outlined-text {
+        display: flex; /* Reset display */
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1535px) {
     .header-content {
         height: 600px;
     }
 
     .header-content img:first-child {
-        width: 25vw;
+        width: 35vw;
     }
 
     .header-content img:last-child {
@@ -164,10 +179,43 @@
 
     .header-content .filled-text,
     .header-content .outlined-text {
-        font-size: 14vw; /* Adjust font size for extra large screens */
+        font-size: 12rem; /* Adjust font size for extra large screens */
+        top: 50%; /* Adjust top position for extra large screens */
     }
 
-    .header-content h3 {
-        font-size: 1.75rem; /* Adjust font size for extra large screens */
+    .header-content .filled-text {
+        z-index: 1; /* Reset z-index */
+    }
+
+    .header-content .outlined-text {
+        display: flex; /* Reset display */
+    }
+}
+
+@media (min-width: 1536px) {
+    .header-content {
+        height: 700px;
+    }
+
+    .header-content img:first-child {
+        width: 30vw;
+    }
+
+    .header-content img:last-child {
+        height: 700px;
+    }
+
+    .header-content .filled-text,
+    .header-content .outlined-text {
+        font-size: 15rem; /* Adjust font size for extra large screens */
+        top: 50%; /* Adjust top position for extra large screens */
+    }
+
+    .header-content .filled-text {
+        z-index: 1; /* Reset z-index */
+    }
+
+    .header-content .outlined-text {
+        display: flex; /* Reset display */
     }
 }

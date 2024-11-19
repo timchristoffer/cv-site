@@ -20,8 +20,7 @@ const About = () => {
       <div className={styles['text-container']}>
         <h1 className={styles['about-title']}>About Me</h1>
         <p className={styles['about-text']}>
-          Hej! Jag heter Tim och jag studerar till .NET Developer med en förkärlek för webbutveckling. Jag älskar att skapa moderna och användarvänliga applikationer som gör livet enklare för användarna. När jag inte kodar, tycker jag om att utforska nya teknologier och förbättra mina färdigheter.
-        </p>
+        Hello! My name is Tim, and I am currently studying to become a .NET Developer with a strong passion for web development. I thoroughly enjoy building modern, intuitive, and user-friendly applications that simplify and enhance users&rsquo; everyday lives. Designing solutions that not only look great but also function seamlessly is something I take pride in. <br /> When I&rsquo;m not coding, I&rsquo;m often diving into new technologies, exploring innovative tools, and finding ways to sharpen my skills. Whether it&rsquo;s experimenting with a new framework or learning about the latest industry trends, I&rsquo;m always eager to grow as a developer. I believe that continuous learning and curiosity are key to becoming a great programmer.        </p>
         <div className={styles['social-icons']}>
           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
             <Image src="/Icons/instagram.svg" alt="Instagram" className={styles['social-icon']} width={24} height={24} />

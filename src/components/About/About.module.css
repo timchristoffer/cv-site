@@ -1,133 +1,134 @@
 .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    background-color: var(--background-blur);
-    margin: 3rem;
-    width: 90vw;
-    max-width: 1600px;
-    height: auto;
-    margin: 0 auto; /* Center the container itself */
-    margin-bottom: 2rem;
-    border-radius: 1rem;
-  }
-  
-  .image-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 32rem; /* max-w-lg */
-    margin: 2rem; /* Add some space between image and text */
-  }
-  
-  .image {
-    border-radius: 0.5rem; /* rounded-lg */
-  }
-  
-  .prev-button,
-  .next-button {
-    display: none; /* Hide the buttons */
-  }
-  
-  .divider {
-    width: 2px;
-    height: 100%;
-    background-color: #ffffff; /* bg-gray-800 */
-    margin: 0 2rem; /* Add margin on both sides */
-  }
-  
-  .text-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .about-title {
-    font-size: 2.25rem; /* text-4xl */
-    font-weight: bold; /* font-bold */
-    margin-bottom: 1rem; /* mb-4 */
-  }
-  
-  .about-text {
-    font-size: 1.125rem; /* text-lg */
-    text-align: left;
-    max-width: 40rem; /* max-w-2xl */
-  }
-  
-  .social-icons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem; /* Add some space above the icons */
-  }
-  
-  .social-icon {
-    width: 48px;
-    height: 48px;
-    transition: transform 0.3s; /* Add transition for hover effect */
-  }
-  
-  .social-icon:hover {
-    transform: scale(1.2); /* Scale up the icon on hover */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--background-blur);
+  width: 70vw;
+  height: auto;
+  margin-bottom: 4rem;
+  border-radius: 1rem;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 32rem; /* max-w-lg */
+  margin: 2rem; /* Add some space between image and text */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.image {
+  border-radius: 0.5rem; /* rounded-lg */
+}
+
+.prev-button,
+.next-button {
+  display: none; /* Hide the buttons */
+}
+
+.divider {
+  width: 2px;
+  height: 100%;
+  background-color: #ffffff; /* bg-gray-800 */
+  margin: 0 2rem; /* Add margin on both sides */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.about-title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: bold; /* font-bold */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.about-text {
+  font-size: 1.125rem; /* text-lg */
+  text-align: left;
+  max-width: 40rem; /* max-w-2xl */
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem; /* Add some space above the icons */
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Scale up the icon on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Stack items vertically */
+    padding: 1rem;
   }
 
-  /* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .about-container {
-      flex-direction: column; /* Stack items vertically */
-      padding: 1rem;
-    }
-  
-    .image-container {
-      margin: 1rem 0; /* Reduce margin */
-    }
-  
-    .divider {
-      width: 100%;
-      height: 2px;
-      margin: 1rem 0; /* Adjust margin for horizontal divider */
-    }
-  
-    .text-container {
-      align-items: center; /* Center text horizontally */
-    }
-  
-    .about-title {
-      font-size: 1.75rem; /* text-3xl */
-    }
-  
-    .about-text {
-      font-size: 1rem; /* text-base */
-      text-align: center; /* Center text */
-    }
-  
-    .social-icon {
-      width: 36px;
-      height: 36px;
-    }
+  .image-container {
+    margin: 1rem 0; /* Reduce margin */
   }
-  
-  @media (max-width: 480px) {
-    .about-container {
-      padding: 0.5rem;
-    }
-  
-    .image-container {
-      margin: 0.5rem 0; /* Further reduce margin */
-    }
-  
-    .about-title {
-      font-size: 1.5rem; /* text-2xl */
-    }
-  
-    .about-text {
-      font-size: 0.875rem; /* text-sm */
-    }
-  
-    .social-icon {
-      width: 24px;
-      height: 24px;
-    }
+
+  .divider {
+    width: 100%;
+    height: 2px;
+    margin: 1rem 0; /* Adjust margin for horizontal divider */
   }
+
+  .text-container {
+    align-items: center; /* Center text horizontally */
+  }
+
+  .about-title {
+    font-size: 1.75rem; /* text-3xl */
+  }
+
+  .about-text {
+    font-size: 1rem; /* text-base */
+    text-align: center; /* Center text */
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 0.5rem;
+  }
+
+  .image-container {
+    margin: 0.5rem 0; /* Further reduce margin */
+  }
+
+  .about-title {
+    font-size: 1.5rem; /* text-2xl */
+  }
+
+  .about-text {
+    font-size: 0.875rem; /* text-sm */
+  }
+
+  .social-icon {
+    width: 24px;
+    height: 24px;
+  }
+}

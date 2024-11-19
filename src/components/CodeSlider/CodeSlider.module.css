@@ -1,7 +1,5 @@
 .logoSlider {
-    width: 90vw; /* Match the width of the header content */
-    max-width: 1600px;
-    margin: 0 auto;
+    width: 70vw;
     margin-bottom: 30px;
     height: var(--height);
     overflow: hidden;
@@ -62,7 +60,7 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
     .logoSlider {
-        width: 80vw; 
+        width: 70vw; 
         --width: 150px; 
         --height: 100px; 
     }
@@ -70,7 +68,7 @@
 
 @media (max-width: 768px) {
     .logoSlider {
-        width: 90vw; 
+        width: 70vw; 
         --width: 120px; 
         --height: 80px; 
     }
@@ -78,7 +76,7 @@
 
 @media (max-width: 480px) {
     .logoSlider {
-        width: 90vw; 
+        width: 70vw; 
         --width: 100px; 
         --height: 60px;
     }

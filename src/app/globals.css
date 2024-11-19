@@ -80,10 +80,11 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 90vw; /* Match the width of the navbar */
   max-width: 1600px;
-  margin: 5rem auto 0 auto;
-  padding: 1rem;
+  margin: 5rem auto 0 auto; /* Center the container itself */
+  padding: 1rem 2rem; /* Match the padding of the navbar */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 @media (min-width: 640px) {
