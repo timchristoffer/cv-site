@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import styles from './Project.module.css';
 import Copyright from '@/components/Copyright/Copyright';
 import NavBar from '@/components/NavBar/NavBar';
+import Image from 'next/image';
 
 const projects = [
   {
@@ -18,7 +19,7 @@ const projects = [
     image: '/images/project2.jpg',
     languages: ['Python', 'Django', 'HTML'],
   },
-  // Lägg till fler projekt här
+  // Add more projects here
 ];
 
 export async function generateStaticParams() {
@@ -43,18 +44,18 @@ export default function ProjectPage({ params }: ProjectPageParams) {
 
   return (
     <div className='project-container'>
-        <NavBar />
-    <div className={styles.projectContainer}>
-      <img src={project.image} alt={project.title} className={styles.projectImage} />
-      <h1 className={styles.projectTitle}>{project.title}</h1>
-      <p className={styles.projectDescription}>{project.description}</p>
-      <div className={styles.projectLanguages}>
-        {project.languages.map((language, index) => (
-          <span key={index} className={styles.languageBadge}>{language}</span>
-        ))}
+      <NavBar />
+      <div className={styles.projectContainer}>
+        <Image src={project.image} alt={project.title} className={styles.projectImage} />
+        <h1 className={styles.projectTitle}>{project.title}</h1>
+        <p className={styles.projectDescription}>{project.description}</p>
+        <div className={styles.projectLanguages}>
+          {project.languages.map((language, index) => (
+            <span key={index} className={styles.languageBadge}>{language}</span>
+          ))}
+        </div>
       </div>
-    </div>
-    <Copyright />
+      <Copyright />
     </div>
   );
 }

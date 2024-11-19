@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './Portfolio.module.css';
+import Image from 'next/image';
 
 const projects = [
   {
@@ -25,7 +26,7 @@ const Portfolio = () => {
       {projects.map((project) => (
         <Link href={`/portfolio/${project.id}`} key={project.id}>
           <div className={styles.portfolioCard}>
-            <img src={project.image} alt={project.title} className={styles.portfolioImage} />
+            <Image src={project.image} alt={project.title} className={styles.portfolioImage} />
             <h3 className={styles.portfolioTitle}>{project.title}</h3>
             <p className={styles.portfolioDescription}>{project.description}</p>
             <div className={styles.portfolioLanguages}>
