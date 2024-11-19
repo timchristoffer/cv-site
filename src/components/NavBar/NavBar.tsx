@@ -17,7 +17,7 @@ const NavBar = () => {
         {/* Your headerArt content */}
       </div>
       <nav className={styles.navbar}>
-        <div className={styles.logo}>Tim.</div>
+        <Link href="/" className={styles.logo}>Tim.</Link>
         <div className={`${styles.menu} ${menuActive ? styles.active : ''}`}>
           <Link href="/">Home</Link>
           <Link href="/portfolio">Portfolio</Link>
