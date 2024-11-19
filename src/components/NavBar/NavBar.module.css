@@ -7,7 +7,7 @@
   align-items: center;
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1; /* Ensure the navbar is above other content */
+  z-index: 3; /* Ensure the navbar is below the headerArt image */
   background-color: var(--background-blur);
   margin: 0 auto;
   border-radius: 50px;
@@ -29,16 +29,16 @@
   font-weight: bold;
 }
 
-.navbar .hireButton{
+.navbar .hireButton {
   background-color: #4caf50;
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-weight: bold;
 }
 
-.navbar .hireButton:hover{
+.navbar .hireButton:hover {
   background-color: #4caf50;
-  color: #000000!important;
+  color: #000000 !important;
   transition: 0.3s;
 }
 
@@ -69,8 +69,10 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: var(--background);
+  border-radius: 2rem;
+  background-color: var(--background-blur);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Ensure the mobile menu is above the headerArt image */
 }
 
 .menu.active a {

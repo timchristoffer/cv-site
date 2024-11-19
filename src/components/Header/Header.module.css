@@ -1,7 +1,6 @@
 .header-container {
     width: 70vw;
     height: auto;
-    margin-top: 2rem;
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
@@ -179,7 +178,7 @@
     }
 
     .header-content img:last-child {
-        height: 600px;
+        height: 500px;
     }
 
     .header-content .filled-text,
@@ -200,10 +199,11 @@
 @media (min-width: 1536px) {
     .header-content {
         height: 700px;
+        margin-top: 8rem;
     }
 
     .header-content img:first-child {
-        width: 30vw;
+        width: 35vw;
     }
 
     .header-content img:last-child {

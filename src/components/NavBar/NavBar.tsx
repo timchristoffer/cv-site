@@ -12,17 +12,22 @@ const NavBar = () => {
   };
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.logo}>Tim.</div>
-      <div className={`${styles.menu} ${menuActive ? styles.active : ''}`}>
-        <Link href="/">Home</Link>
-        <Link href="/portfolio">Portfolio</Link>
+    <>
+      <div className="headerArt" style={{ zIndex: 1 }}> {/* Ensure headerArt is below the mobile menu but above the navbar */}
+        {/* Your headerArt content */}
+      </div>
+      <nav className={styles.navbar}>
+        <div className={styles.logo}>Tim.</div>
+        <div className={`${styles.menu} ${menuActive ? styles.active : ''}`}>
+          <Link href="/">Home</Link>
+          <Link href="/portfolio">Portfolio</Link>
           <Link href="/contact" className={styles.hireButton}>Hire me!</Link>
-      </div>
-      <div className={styles['menu-toggle']} onClick={toggleMenu}>
-        ☰
-      </div>
-    </nav>
+        </div>
+        <div className={styles['menu-toggle']} onClick={toggleMenu}>
+          ☰
+        </div>
+      </nav>
+    </>
   );
 };
 
