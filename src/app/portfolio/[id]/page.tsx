@@ -46,7 +46,7 @@ export default function ProjectPage({ params }: ProjectPageParams) {
     <div className='project-container'>
       <NavBar />
       <div className={styles.projectContainer}>
-        <Image src={project.image} alt={project.title} className={styles.projectImage} />
+        <Image src={project.image} alt={project.title} className={styles.projectImage} width={800} height={600} />
         <h1 className={styles.projectTitle}>{project.title}</h1>
         <p className={styles.projectDescription}>{project.description}</p>
         <div className={styles.projectLanguages}>
