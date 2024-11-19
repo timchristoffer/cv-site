@@ -1,6 +1,6 @@
 .contact-form-container {
     max-width: 800px; /* Increase the max-width to make the form wider */
-    width: 100%; /* Ensure the form takes up the full width */
+    width: 90vw; /* Ensure the form takes up the full width */
     margin: 0 auto;
     margin-top: 5rem;
     padding: 2rem;
