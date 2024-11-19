@@ -28,13 +28,7 @@ export async function generateStaticParams() {
   }));
 }
 
-interface ProjectPageParams {
-  params: {
-    id: string;
-  };
-}
-
-export default function ProjectPage({ params }: ProjectPageParams) {
+export default function ProjectPage({ params }: { params: { id: string } }) {
   const { id } = params;
   const project = projects.find((project) => project.id === id);
 
