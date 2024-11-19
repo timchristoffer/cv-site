@@ -7,14 +7,14 @@ const projects = [
     id: 'project1',
     title: 'Project One',
     description: 'This is a description of project one.',
-    image: '/images/project1.jpg',
+    image: '/Images/spike_bomb.png',
     languages: ['JavaScript', 'React', 'CSS'],
   },
   {
     id: 'project2',
     title: 'Project Two',
     description: 'This is a description of project two.',
-    image: '/images/project2.jpg',
+    image: '/Images/spike_bomb.png',
     languages: ['Python', 'Django', 'HTML'],
   },
   // Lägg till fler projekt här
@@ -26,7 +26,13 @@ const Portfolio = () => {
       {projects.map((project) => (
         <Link href={`/portfolio/${project.id}`} key={project.id}>
           <div className={styles.portfolioCard}>
-            <Image src={project.image} alt={project.title} className={styles.portfolioImage} />
+            <Image
+              src={project.image}
+              alt={project.title}
+              className={styles.portfolioImage}
+              width={300}
+              height={200}
+            />
             <h3 className={styles.portfolioTitle}>{project.title}</h3>
             <p className={styles.portfolioDescription}>{project.description}</p>
             <div className={styles.portfolioLanguages}>

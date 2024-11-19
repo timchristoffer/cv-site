@@ -9,14 +9,14 @@ const projects = [
     id: 'project1',
     title: 'Project One',
     description: 'This is a detailed description of project one.',
-    image: '/images/project1.jpg',
+    image: '/Images/spike_bomb.png',
     languages: ['JavaScript', 'React', 'CSS'],
   },
   {
     id: 'project2',
     title: 'Project Two',
     description: 'This is a detailed description of project two.',
-    image: '/images/project2.jpg',
+    image: '/Images/spike_bomb.png',
     languages: ['Python', 'Django', 'HTML'],
   },
   // Add more projects here
@@ -29,13 +29,13 @@ export async function generateStaticParams() {
 }
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const { id } = params;
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { id } = await params;
   const project = projects.find((project) => project.id === id);
 
   if (!project) {
@@ -43,15 +43,24 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <div className='project-container'>
+    <div className="project-container">
       <NavBar />
       <div className={styles.projectContainer}>
-        <Image src={project.image} alt={project.title} className={styles.projectImage} width={800} height={600} />
+        <Image
+          src={project.image}
+          alt={project.title}
+          className={styles.projectImage}
+          width={800}
+          height={600}
+          priority
+        />
         <h1 className={styles.projectTitle}>{project.title}</h1>
         <p className={styles.projectDescription}>{project.description}</p>
         <div className={styles.projectLanguages}>
           {project.languages.map((language, index) => (
-            <span key={index} className={styles.languageBadge}>{language}</span>
+            <span key={index} className={styles.languageBadge}>
+              {language}
+            </span>
           ))}
         </div>
       </div>
