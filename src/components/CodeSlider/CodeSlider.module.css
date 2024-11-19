@@ -68,7 +68,7 @@
 
 @media (max-width: 768px) {
     .logoSlider {
-        width: 70vw; 
+        width: 90vw; 
         --width: 120px; 
         --height: 80px; 
     }
@@ -76,7 +76,7 @@
 
 @media (max-width: 480px) {
     .logoSlider {
-        width: 70vw; 
+        width: 90vw; 
         --width: 100px; 
         --height: 60px;
     }

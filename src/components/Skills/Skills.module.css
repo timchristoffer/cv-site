@@ -102,6 +102,9 @@
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
+    .skills-container{
+        width: 90vw;
+    }
     .skills-list {
         grid-template-columns: 1fr;
         gap: 4rem; /* Adjust the gap for medium screens */

@@ -79,6 +79,7 @@
   .about-container {
     flex-direction: column; /* Stack items vertically */
     padding: 1rem;
+    width: 90vw;
   }
 
   .image-container {
