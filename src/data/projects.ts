@@ -24,7 +24,7 @@ export const projects = [
       languages: ['Next.js', 'React', 'HTML', 'TypeScript', 'Tailwind CSS'],
     },
     {
-        id: 'old-cv-project',
+        id: 'oldcvsite',
         title: 'Old CV Project',
         shortDescription: 'My CV Website was a personal project created early in my education as a .NET Developer.',
         description: 'My CV Website was a personal project created early in my education as a .NET Developer. Built with HTML, CSS, and JavaScript, it served as my introduction to web development and my first attempt at creating a polished and interactive site. This project featured a fun and functional dark mode/light mode switch, marking my first experience implementing dynamic user interface elements. It reflects the effort and enthusiasm I put into learning web development fundamentals and creating something both practical and visually appealing.',
@@ -32,7 +32,7 @@ export const projects = [
         languages: ['HTML', 'CSS', 'JavaScript'],
       },
     {
-        id: 'code-analytics-tool',
+        id: 'kit',
         title: 'KIT - Keep It Tidy *Work In Progress*',
         shortDescription: 'My current project is a code analytics tool that helps developers maintain clean and efficient code. Still in development.',
         description: 'My current project is a code analytics tool that helps developers maintain clean and efficient code. The tool analyzes codefiles, identifies potential issues, and provides suggestions for improvement. It aims to help developers write better code, adhere to best practices, and optimize performance. The project is built using Next.js for the frontend, C# for the backend, and PostgreSQL as the database. I am working on integrating various code analysis tools, such as ESLint and Roslyn, but I am also building my own analysis tool, to provide comprehensive feedback and recommendations. This project showcases my commitment to continuous learning and improvement, as well as my dedication to creating tools that benefit developers and enhance the coding experience.',

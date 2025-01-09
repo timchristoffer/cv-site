@@ -12,13 +12,14 @@ export async function generateStaticParams() {
 }
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const { id } = params;
+
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { id } = await params;
   const project = projects.find((project) => project.id === id);
 
   if (!project) {
