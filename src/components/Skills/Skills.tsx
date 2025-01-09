@@ -19,20 +19,22 @@ const Skills = () => {
           <div className={styles['skills-content']}>
             <h1 className={styles['skills-title']}>Frontend Development</h1>
             <div className={styles['skills-desc']}>
-              <p>HTML</p>
-              <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '90%' }}></div></div>
-              <p>CSS</p>
-              <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '85%' }}></div></div>
-              <p>JavaScript</p>
+              <p>C#</p>
               <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '80%' }}></div></div>
-              <p>React</p>
+              <p>CSS</p>
               <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '75%' }}></div></div>
-              <p>Next.js</p>
+              <p>JavaScript</p>
               <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '70%' }}></div></div>
+              <p>React</p>
+              <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '65%' }}></div></div>
+              <p>Next.js</p>
+              <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '60%' }}></div></div>
               {showMoreFrontend && (
                 <>
                   <p>TypeScript</p>
-                  <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '85%' }}></div></div>
+                  <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '75%' }}></div></div>
+                  <p>HTML</p>
+                  <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '70%' }}></div></div>
                 </>
               )}
               <button className={styles['toggle-button']} onClick={toggleMoreFrontend}>
@@ -47,12 +49,6 @@ const Skills = () => {
             <h1 className={styles['skills-title']}>Backend Development</h1>
             <div className={styles['skills-desc']}>
               <p>Node.js</p>
-              <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '85%' }}></div></div>
-              <p>Express</p>
-              <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '80%' }}></div></div>
-              <p>Django</p>
-              <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '70%' }}></div></div>
-              <p>Ruby on Rails</p>
               <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '65%' }}></div></div>
             </div>
           </div>
@@ -70,6 +66,8 @@ const Skills = () => {
               <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '80%' }}></div></div>
               <p>MongoDB</p>
               <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '75%' }}></div></div>
+              <p>tRPC</p>
+              <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '55%' }}></div></div>
             </div>
           </div>
         </div>
@@ -84,8 +82,6 @@ const Skills = () => {
               <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '80%' }}></div></div>
               <p>Git</p>
               <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '75%' }}></div></div>
-              <p>JIRA</p>
-              <div className={styles['progress-bar']}><div className={styles['progress']} style={{ width: '70%' }}></div></div>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import CodeSlider from "@/components/CodeSlider/CodeSlider";
-import Experience from "@/components/Experience/Experience";
+// import Experience from "@/components/Experience/Experience";
 import Header from "@/components/Header/Header";
 import NavBar from "@/components/NavBar/NavBar";
 import Skills from "@/components/Skills/Skills";
@@ -14,7 +14,7 @@ export default function Home() {
           <Header />
           <CodeSlider />
           <About />
-          <Experience />
+          {/* <Experience /> */}
           <Skills />
       </div>
       <Copyright />

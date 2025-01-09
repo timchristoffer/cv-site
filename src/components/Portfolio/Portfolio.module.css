@@ -11,10 +11,9 @@
   background: var(--background-blur);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
   transition: transform 0.3s ease;
   cursor: pointer;
-  width: 300px;
+  width: 500px;
   text-align: center;
   text-decoration: none; /* Ta bort understrykning från länkar */
 }
@@ -30,8 +29,10 @@
 
 .portfolioImage {
   width: 100%;
-  height: 200px;
+  height: 400px;
   object-fit: cover;
+  padding: 1rem ;
+  filter: grayscale(50%);
 }
 
 .portfolioTitle {

@@ -1,24 +1,7 @@
 import Link from 'next/link';
 import styles from './Portfolio.module.css';
 import Image from 'next/image';
-
-const projects = [
-  {
-    id: 'project1',
-    title: 'Project One',
-    description: 'This is a description of project one.',
-    image: '/Images/spike_bomb.png',
-    languages: ['JavaScript', 'React', 'CSS'],
-  },
-  {
-    id: 'project2',
-    title: 'Project Two',
-    description: 'This is a description of project two.',
-    image: '/Images/spike_bomb.png',
-    languages: ['Python', 'Django', 'HTML'],
-  },
-  // Lägg till fler projekt här
-];
+import { projects } from '@/data/projects'; // Importera projektdata
 
 const Portfolio = () => {
   return (
@@ -27,14 +10,14 @@ const Portfolio = () => {
         <Link href={`/portfolio/${project.id}`} key={project.id}>
           <div className={styles.portfolioCard}>
             <Image
-              src={project.image}
+              src={project.images[0]} // Använd den första bilden i arrayen
               alt={project.title}
               className={styles.portfolioImage}
               width={300}
               height={200}
             />
             <h3 className={styles.portfolioTitle}>{project.title}</h3>
-            <p className={styles.portfolioDescription}>{project.description}</p>
+            <p className={styles.portfolioDescription}>{project.shortDescription}</p>
             <div className={styles.portfolioLanguages}>
               {project.languages.map((language, index) => (
                 <span key={index} className={styles.languageBadge}>{language}</span>
